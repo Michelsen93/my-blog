@@ -9,7 +9,9 @@ import (
 func main() {
     app := echo.New()
     indexHandler := handler.IndexHandler{}
+    blogpostHandler := handler.BlogPostHandler{}
     app.GET("/", indexHandler.HandleIndexShow)
+    app.GET("/blog", blogpostHandler.HandleBlogPostShow)
 
     app.Start(":6969")
     fmt.Println("Server running")
