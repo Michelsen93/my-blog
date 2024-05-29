@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/Michelsen93/my-blog/handler"
 	"github.com/labstack/echo/v4"
 )

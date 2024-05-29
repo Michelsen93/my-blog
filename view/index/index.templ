@@ -3,5 +3,12 @@ package index
 //Should probably do this with prop
 
 templ Show() {
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <h1>Hello World!</h1>
+    <div
+        hx-get="/blog"
+        hx-trigger="load"
+    >
+        
+    </div>
 }
