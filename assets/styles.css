@@ -1,4 +1,7 @@
-
+:root {
+    color-scheme: light dark;
+}
 body {
-    background-color: '#000'
+    background-color: light-dark(#fff, #000);
+    color: light-dark(#000, #fff);
 }
