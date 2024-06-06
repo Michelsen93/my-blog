@@ -7,6 +7,7 @@ import (
 )
 func main() {
     app := echo.New()
+    app.Static("/", "assets")
     indexHandler := handler.IndexHandler{}
     blogpostHandler := handler.BlogPostHandler{}
     app.GET("/", indexHandler.HandleIndexShow)
