@@ -1,51 +1,52 @@
-root = "./cmd"
-testdata_dir = "testdata"
+# Config file for Air - Live Reload for Go
+
+# Working directory
+root = "."
 tmp_dir = "tmp"
 
 [build]
-  args_bin = []
-  bin = "./tmp/main"
-  cmd = "make"
-  delay = 1000
-  exclude_dir = ["tmp", "vendor", "testdata"]
-  exclude_file = []
-  exclude_regex = ["_test.go"]
-  exclude_unchanged = false
-  follow_symlink = false
-  full_bin = ""
-  include_dir = []
-  include_ext = ["go", "tpl", "tmpl", "html", "md", "css", "templ"]
-  include_file = []
-  kill_delay = "0s"
-  log = "build-errors.log"
-  poll = false
-  poll_interval = 0
-  post_cmd = []
-  pre_cmd = []
-  rerun = false
-  rerun_delay = 500
-  send_interrupt = false
-  stop_on_error = false
+# Binary file generated
+bin = "tmp/main"
 
-[color]
-  app = ""
-  build = "yellow"
-  main = "magenta"
-  runner = "green"
-  watcher = "cyan"
+# Main file to build
+cmd = "go build -o ./tmp/main ."
+
+# Include all directories containing source files
+include_ext = ["go", "tmpl", "templ", "tpl", "html"]
+
+# Exclude specific files or directories
+exclude_dir = ["assets", "bin", "tmp"]
+
+# Allow to build on .go and .mod file changes
+include_dir = ["."]
+exclude_file = ["go.sum"]
+
+# Watch these files and trigger a rebuild
+watch_dir = ["main", "model", "handler", "view", "posts"]
+
+# Delays
+delay = 200 # milliseconds
+
+# Command to execute after building the binary
+cmd_args = []
 
 [log]
-  main_only = false
-  time = false
+# Enable logging
+level = "debug"
+# Log format
+format = "text"
+
+[color]
+# Terminal colors
+main = "cyan"
+watcher = "yellow"
+error = "red"
 
 [misc]
-  clean_on_exit = false
-
-[proxy]
-  app_port = 0
-  enabled = false
-  proxy_port = 0
+# Delete tmp directory on exit
+clean_on_exit = true
 
 [screen]
-  clear_on_rebuild = false
-  keep_scroll = true
+clear_on_rebuild = true
+keep_scroll = true
+

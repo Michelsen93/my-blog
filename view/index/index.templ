@@ -11,12 +11,15 @@ templ Show() {
         <link rel="stylesheet" href="/styles.css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Hello World! 123</h1>
         <div
             hx-get="/blog"
             hx-trigger="load"
-        >
-        </div>
+        />
+        <div 
+            hx-get="/blog_list"
+            hx-trigger="load"
+        />
     </body>
 </html>
 
