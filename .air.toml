@@ -15,7 +15,7 @@ cmd = "go build -o ./tmp/main ."
 include_ext = ["go", "tmpl", "templ", "tpl", "html"]
 
 # Exclude specific files or directories
-exclude_dir = ["assets", "bin", "tmp"]
+exclude_dir = ["bin", "tmp"]
 
 # Allow to build on .go and .mod file changes
 include_dir = ["."]

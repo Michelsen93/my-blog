@@ -5,3 +5,10 @@ body {
     background-color: light-dark(#fff, #000);
     color: light-dark(#000, #fff);
 }
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+}
+
