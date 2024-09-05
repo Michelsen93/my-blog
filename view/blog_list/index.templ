@@ -1,13 +1,13 @@
 package blog_list
 
-import (
-    "github.com/Michelsen93/my-blog/model"
-)
+import "github.com/Michelsen93/my-blog/model"
 
 templ Show(postsMetaData []model.BlogMetaData) {
-    <ul>
-        for _, item := range postsMetaData {
-            <li><a href={ templ.SafeURL("blog" + item.Path) }>{item.Title}</a></li>
-        }
-    </ul>
+<ul>
+    for _, item := range postsMetaData {
+    <li>
+        <a href="#" hx-target="#blog-content" hx-get={ "blog" + item.Path }>{ item.Title }</a>
+    </li>
+    }
+</ul>
 }
