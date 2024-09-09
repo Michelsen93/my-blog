@@ -12,17 +12,37 @@ body {
     background-color: light-dark(#fff, #000);
     color: light-dark(#000, #fff);
 }
+
 .container {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 10px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.vertical-container {
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
 }
 
 .side-bar {
-    padding-right: 16px;
-    border-right: 1px solid;
+    padding-left: 16px;
+    padding-right: 32px;
+    border-left: 1px solid;
     height: 100%;
 }
 
+.content {
+    flex-grow: 1;
+    padding-left: 64px;
+    padding-right: 64px;
+}

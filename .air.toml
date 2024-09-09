@@ -12,7 +12,7 @@ bin = "tmp/main"
 cmd = "go build -o ./tmp/main ."
 
 # Include all directories containing source files
-include_ext = ["go", "tmpl", "templ", "tpl", "html"]
+include_ext = ["go", "tmpl", "templ", "tpl", "html", "css"]
 
 # Exclude specific files or directories
 exclude_dir = ["bin", "tmp"]

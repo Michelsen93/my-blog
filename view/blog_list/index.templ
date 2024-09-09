@@ -3,7 +3,7 @@ package blog_list
 import "github.com/Michelsen93/my-blog/model"
 
 templ Show(postsMetaData []model.BlogMetaData) {
-<ul>
+<ul class="bottom">
     for _, item := range postsMetaData {
     <li>
         <a href="#" hx-target="#blog-content" hx-get={ "blog" + item.Path }>{ item.Title }</a>

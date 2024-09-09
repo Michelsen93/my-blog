@@ -13,11 +13,16 @@ templ Show() {
 </head>
 
 <body>
-    <div class="container">
+    <div class="vertical-container">
+        <div class="header">
+            <h1>Ole-Martin Michelsen Blog</h1>
+        </div>
+        <div class="container">
+            <div id="blog-content" hx-get="/blog" hx-trigger="load" class="content"></div>
         <div class="side-bar">
             <div hx-get="/blog_list" hx-trigger="load"></div>
         </div>
-        <div id="blog-content" hx-get="/blog" hx-trigger="load"></div>
+        </div>
     </div>
 </body>
 
