@@ -1,7 +1,9 @@
 package index
 
-//import "github.com/russross/blackfriday"
-//Should probably do this with prop
+import (
+	"github.com/Michelsen93/my-blog/posts"
+)
+
 templ Show() {
 <!DOCTYPE html>
 <html lang="no">
@@ -18,7 +20,7 @@ templ Show() {
             <h1>Ole-Martin Michelsen Blog</h1>
         </div>
         <div class="container">
-            <div id="blog-content" hx-get="/blog" hx-trigger="load" class="content"></div>
+            <div id="blog-content" hx-get={ "blog" + posts.BlogPosts()[0].Path} hx-trigger="load" class="content"></div>
         <div class="side-bar">
             <div hx-get="/blog_list" hx-trigger="load"></div>
         </div>

@@ -5,12 +5,8 @@ import "github.com/Michelsen93/my-blog/model"
 func BlogPosts() []model.BlogMetaData {
     return []model.BlogMetaData{
         {   
-            Title: "Consistency", 
-            Category: model.Category{
-                Name: "Sport",  
-                Color: "#444",
-            },
-            Path: "/sport/consistency.md",
+            Title: "Hei bloggen", 
+            Path: "/my-blog/generelt/hei_bloggen.md",
         },
     }
 }

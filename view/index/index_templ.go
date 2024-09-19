@@ -8,8 +8,10 @@ package index
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-// import "github.com/russross/blackfriday"
-// Should probably do this with prop
+import (
+	"github.com/Michelsen93/my-blog/posts"
+)
+
 func Show() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -31,7 +33,20 @@ func Show() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"no\"><head><meta charset=\"UTF-8\"><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><link rel=\"stylesheet\" href=\"/styles.css\"></head><body><div class=\"vertical-container\"><div class=\"header\"><h1>Ole-Martin Michelsen Blog</h1></div><div class=\"container\"><div id=\"blog-content\" hx-get=\"/blog\" hx-trigger=\"load\" class=\"content\"></div><div class=\"side-bar\"><div hx-get=\"/blog_list\" hx-trigger=\"load\"></div></div></div></div></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"no\"><head><meta charset=\"UTF-8\"><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><link rel=\"stylesheet\" href=\"/styles.css\"></head><body><div class=\"vertical-container\"><div class=\"header\"><h1>Ole-Martin Michelsen Blog</h1></div><div class=\"container\"><div id=\"blog-content\" hx-get=\"")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var2 string
+		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("blog" + posts.BlogPosts()[0].Path)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/index/index.templ`, Line: 23, Col: 78}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-trigger=\"load\" class=\"content\"></div><div class=\"side-bar\"><div hx-get=\"/blog_list\" hx-trigger=\"load\"></div></div></div></div></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
