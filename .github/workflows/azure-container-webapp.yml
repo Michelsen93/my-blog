@@ -19,7 +19,7 @@ jobs:
 
     - name: Build the Go app
       run: |
-        go build -o build/go-app.exe -v
+        go build -o build/go-app -v
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2

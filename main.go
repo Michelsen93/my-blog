@@ -22,13 +22,9 @@ func main() {
     app.GET("/blog_list", blogListHanler.HandleBlogListShow)
     ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
     defer stop()
-    port := os.Getenv("HTTP_PLATFORM_PORT");
-    if port == "" {
-        port = "8080"
-    }
     go func() {
-		if err := app.Start(port); err != nil && err != http.ErrServerClosed {
-			app.Logger.Fatal("shutting down the server")
+        if err := app.Start(":8080"); err != nil && err != http.ErrServerClosed {
+			app.Logger.Fatal("shutting down the server", err.Error())
 		}
         fmt.Println("Server running")
 	}()
