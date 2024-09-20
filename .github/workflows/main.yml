@@ -35,3 +35,14 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: my-blog
             location: 'norway east'
+
+        - name: 'Update Azure App Service with the new container image'
+          run: |
+            az webapp config container set \
+              --name michelsen-blog \
+              --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+              --docker-custom-image-name ${{ secrets.REGISTRY_LOGIN_SERVER }}/my-blog:${{ github.sha }} \
+              --docker-registry-server-url https://${{ secrets.REGISTRY_LOGIN_SERVER }} \
+              --docker-registry-server-user ${{ secrets.REGISTRY_USERNAME }} \
+              --docker-registry-server-password ${{ secrets.REGISTRY_PASSWORD }}
+
