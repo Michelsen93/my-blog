@@ -1,13 +1,25 @@
 # Jeg har laget en blogg
 
-Jeg har nå jobbet som utvikler i over 7 år etter at jeg var ferdig med min utdannelse i 2017. Siden den gang har jeg faktisk ikke laget et eneste program som var for meg selv, eller bare for morro. 
+Jeg har startet et lite prosjekt for å lære litt andre ting enn det jeg får igjennom jobben. 
 
-Utvikling har vært en jobb, en måte å få tak over hodet og mat på bordet. En nødvendighet. Noe jeg MÅ gjøre...
+### Litt om teknologien
 
-Ved årsskifte, som mange andre gjør, vurderte jeg min nåværende posisjon. Jeg har tak over hodet, mat på bordet, en flott familie, god helse. Men jeg klarte ikke helt å være fornøyd med det. Det jeg bruker mest tid på (jobb) er ikke så gøy, skulle helst gjort noe annet. 
+#### Go
+[Go](https://go.dev/)
+Jeg har alltid syntes at Go har virket som et kult språk, så jeg valgte å implementere web-serveren i Go. Det har vært ganske annerledes enn de språkene jeg til vanlig jobber med (dart, js, c#, kotlin, swift), men jeg merket at med en gang jeg kom meg over de første utfordringene, har det vært en fin opplevelse. Det virker som koden jeg skriver blir på en måte litt simplere eller mer konsis.
 
-Så med det bestemte jeg meg for å bli engasjert i utvikling. Og hvordan gjør man det? Vel med å skape indre motivasjon. Gjør man noe av ytre motivasjon, vil man like det mindre og mindre. Så hvordan skape indre motivasjon? Jeg prøver fortsatt å finne ut av det, men jeg har nå funnet ut at å skape noe eget, som en brenner for, skaper det. Som denne bloggen. Det har faktisk vært gøy å lære seg et nytt programmeringsspråk, litt grunnleggende web hosting, markdown og faktisk fullføre et prosjekt. Dette er ting jeg gjør til vanlig i jobben, men når det kun er for min egen del, skaper det en helt annen følelse.
+#### HTMX go/templ
+[HTMX](https://htmx.org/) [go/templ](https://github.com/a-h/templ)
+Jeg ønsket å oppleve noe nytt i forhold til å generere frontend, der jeg alltid har jobbet med rene frontend-er med "tyngre" rammeverk som React, Jetpack compose, Flutter, xaml osv. Jeg liker også godt måten utvider html med HTMX sine attributter. Jeg syntes at det er effektivt på å skrive visningene, og kan fokusere mer på funksjonaliteten bak, dog er det ikke noe særlig komplisert applikasjon som er laget enda. Det er uansett utrolig deilig å kun jobbe med en kodebase for front og backend.
+Kan absolutt anbefales.
+#### Azure Cloud
+[Azure](http://portal.azure.com/)
+Cloud og servere og alt knyttet til dette er vel det jeg kan minst om, og jeg ser at det er utrolig mye å lære, og at dette er et meget kult fagfelt. Jeg kommer nok til å vie en del tid til dette fremover siden jeg ser store gevinster med å lære seg å gjøre dette på riktig måte.
 
-Nå er faktisk jobben en ting jeg gleder meg til. Mitt lille fristed. Der jeg blir bedre på noe jeg faktisk ønsker å bruke tiden min på. 
+Jeg hoster siden i Azure, mest fordi jeg får et lite budsjett med min visual studio lisens, og at inntrykket mitt er at dette er mye brukt i utviklingsmiljøet her i Norge. Det er en "web application" som peker mot en Docker container som deployes til Azure. Jeg er ikke veldig imponert over hvordan det var å sette opp en nett tjeneste i Azure. Ihvertfall ikke den måten som blir anbefalt i dokumentasjonen. Her skal jeg prøve å benytte plattform agnostiske løsninger, for dette med AZ cloud shell og arm templates/bicep har jeg ikke særlig troen på at kan være en god løsning. Særlig siden det også kun virker i Azure, og jeg ønsker å lære meg teknologier som kan benyttes andre steder også. 
+
+### Hva skal bloggen være?
+Tror jeg kommer til å blogge om alt mulig. Livet mitt dreier seg rundt familie, utvikling, trening og bøker, så det er vel noe innen det en kan forvente seg fremover. 
 
 
+Takk for tiden.
