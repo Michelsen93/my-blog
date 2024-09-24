@@ -2,7 +2,6 @@
     color-scheme: light dark;
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --small-screen: 768px;
-    --medium-screen: 992px;
 }
 
 html {
@@ -65,10 +64,8 @@ a {
 }
 
 article {
-    max-width: var(--medium-screen);
+    max-width: var(--small-screen);
 }
-
-
 
 @media (max-width: var(--small-screen)) {
     .container {
