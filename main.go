@@ -13,13 +13,18 @@ package main
 )
 func main() {
     app := echo.New()
-    app.Static("/", "assets")
+
     indexHandler := handler.IndexHandler{}
     blogpostHandler := handler.BlogPostHandler{}
     blogListHanler := handler.BlogListHandler{}
+
+
+    app.Static("/", "assets")
+
     app.GET("/", indexHandler.HandleIndexShow)
     app.GET("/blog/:path", blogpostHandler.HandleBlogPostShow)
     app.GET("/blog_list", blogListHanler.HandleBlogListShow)
+
     ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
     defer stop()
     go func() {

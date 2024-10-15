@@ -8,7 +8,7 @@ package index
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/Michelsen93/my-blog/posts"
+import "github.com/Michelsen93/my-blog/data"
 
 func Show() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -36,15 +36,15 @@ func Show() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
-		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("blog" + posts.BlogPosts()[0].Path)
+		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("blog" + data.InitialPost().Path)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/index/index.templ`, Line: 22, Col: 78}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/index/index.templ`, Line: 22, Col: 76}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-trigger=\"load\" class=\"content\"></article></div><div class=\"side-bar\"><nav hx-get=\"/blog_list\" hx-trigger=\"load\"></nav></div></div></div></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-trigger=\"load\"></article></div><div class=\"side-bar\"><nav hx-get=\"/blog_list\" hx-trigger=\"load\"></nav></div></div></div></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

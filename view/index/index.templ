@@ -1,6 +1,6 @@
 package index
 
-import "github.com/Michelsen93/my-blog/posts"
+import "github.com/Michelsen93/my-blog/data"
 
 templ Show() {
 	<!DOCTYPE html>
@@ -19,7 +19,7 @@ templ Show() {
 				</header>
 				<div class="container">
 				<div class="content">
-					<article class="blog-content" hx-get={ "blog" + posts.BlogPosts()[0].Path } hx-trigger="load" class="content"></article>
+					<article class="blog-content" hx-get={ "blog" + data.InitialPost().Path } hx-trigger="load"></article>
                 </div>
 					<div class="side-bar">
 						<nav hx-get="/blog_list" hx-trigger="load"></nav>

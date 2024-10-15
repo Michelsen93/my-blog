@@ -1,13 +1,19 @@
 package blog_list
 
-import "github.com/Michelsen93/my-blog/model"
+import "github.com/Michelsen93/my-blog/data"
 
-templ Show(postsMetaData []model.BlogMetaData) {
-<ul class="bottom">
-    for _, item := range postsMetaData {
-    <li>
-        <a href="#" hx-target="#blog-content" hx-get={ "blog" + item.Path }>{ item.Title }</a>
-    </li>
-    }
-</ul>
+templ Show() {
+	<ul class="bottom">
+		for _, category := range data.PostLists() {
+            <li class={category.CSSClass}> { category.Name }
+			<ul>
+				for _, item := range category.Posts {
+					<li>
+						<a href="#" hx-target=".blog-content" hx-get={ "blog" + item.Path }>{ item.Title }</a>
+					</li>
+				}
+			</ul>
+            </li>
+		}
+	</ul>
 }
