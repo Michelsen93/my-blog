@@ -11,17 +11,12 @@ bin = "tmp/main"
 # Main file to build
 cmd = "go build -o ./tmp/main ."
 
-# Include all directories containing source files
-include_ext = ["go", "tmpl", "templ", "tpl", "html", "css", "templ.go"]
 
-# Exclude specific files or directories
 exclude_dir = ["bin", "tmp"]
 
-# Allow to build on .go and .mod file changes
 include_dir = ["."]
 exclude_file = ["go.sum"]
 
-# Delays
 delay = 200 # milliseconds
 
 # Command to execute after building the binary

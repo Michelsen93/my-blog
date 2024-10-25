@@ -1,9 +1,9 @@
 package data
 
 type PostCategory struct {
-	Name  string
+	Name     string
 	CSSClass string
-	Posts []BlogMetaData
+	Posts    []BlogMetaData
 }
 
 type BlogMetaData struct {
@@ -14,48 +14,28 @@ type BlogMetaData struct {
 var techPosts = []BlogMetaData{
 	{
 		Title: "Ny på cloud",
-		Path:  "/my-blog/generelt/cloud_IaC.md",
+		Path:  "/my-blog/teknologi/cloud_IaC.md",
 	},
 	{
 		Title: "Hei bloggen",
-		Path:  "/my-blog/generelt/hei_bloggen.md",
+		Path:  "/my-blog/teknologi/hei_bloggen.md",
 	},
-}
-
-var generalPosts = []BlogMetaData{
 	{
-		Title: "Test",
-		Path:  "Test",
-	},
-}
-
-var sportPosts = []BlogMetaData{
-	{
-		Title: "Sport",
-		Path:  "Test",
+		Title: "Farvel Go",
+		Path:  "/my-blog/teknologi/farvel_go.md",
 	},
 }
 
 func InitialPost() BlogMetaData {
-    return techPosts[len(techPosts)-1]
+	return techPosts[len(techPosts)-1]
 }
 
 func PostLists() []PostCategory {
-    return []PostCategory{
-        {
-            Name: "Sport",
-            CSSClass: "#f4f4f4",
-            Posts: sportPosts,
-        },
-        {
-            Name: "Teknologi",
-            CSSClass: "#f4f4f4",
-            Posts: techPosts,
-        },
-        {
-            Name: "Generelt",
-            CSSClass: "#f4f4f4",
-            Posts: generalPosts,
-        },
-    }
+	return []PostCategory{
+		{
+			Name:     "Teknologi",
+			CSSClass: "technology",
+			Posts:    techPosts,
+		},
+	}
 }

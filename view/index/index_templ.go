@@ -31,14 +31,14 @@ func Show() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"no\"><head><meta charset=\"UTF-8\"><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><link rel=\"stylesheet\" href=\"/styles.css\"></head><body><div class=\"vertical-container\"><header><h1>Ole-Martin Michelsen Blog</h1></header><div class=\"container\"><div class=\"content\"><article class=\"blog-content\" hx-get=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"no\"><head><meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"><meta charset=\"UTF-8\"><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><link rel=\"stylesheet\" href=\"/styles.css\"></head><body><div class=\"vertical-container\"><header><h1>Ole-Martin Michelsen Blog</h1></header><div class=\"container\"><div class=\"content\"><article class=\"blog-content\" hx-get=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("blog" + data.InitialPost().Path)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/index/index.templ`, Line: 22, Col: 76}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/index/index.templ`, Line: 24, Col: 76}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {

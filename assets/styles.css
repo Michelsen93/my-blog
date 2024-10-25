@@ -67,6 +67,14 @@ article {
     max-width: var(--small-screen);
 }
 
+ul li.sport {
+    color: #00fafa;
+}
+
+ul li.technology {
+    color: #faf200;
+}
+
 @media (max-width: var(--small-screen)) {
     .container {
         flex-direction: column;
