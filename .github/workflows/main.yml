@@ -24,18 +24,6 @@ jobs:
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/my-blog:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/my-blog:${{ github.sha }}
 
-        - name: 'Deploy to Azure Container Instances'
-          uses: 'azure/aci-deploy@v1'
-          with:
-            resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
-            dns-name-label: ${{ secrets.AZURE_RESOURCE_GROUP }}${{ github.run_number }}
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/my-blog:${{ github.sha }}
-            registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-            registry-username: ${{ secrets.REGISTRY_USERNAME }}
-            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-            name: my-blog
-            location: 'norway east'
-
         - name: 'Update Azure App Service with the new container image'
           run: |
             az webapp config container set \
